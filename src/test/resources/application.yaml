@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_unravel_test
+    username: postgres
+    password:
+  profiles:
+    active: test

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: api-dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_unravel_dev
+    username: postgres
+    password:
