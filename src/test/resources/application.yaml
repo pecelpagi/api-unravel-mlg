@@ -7,3 +7,6 @@ spring:
     password:
   profiles:
     active: test
+  liquibase:
+    enabled: false
+    change-log: classpath:db/changelog-test-master.yaml

@@ -1,1 +1,1 @@
-./mvnw clean install -Dspring.profiles.active=prod -Dmaven.test.skip
+./mvnw clean install
