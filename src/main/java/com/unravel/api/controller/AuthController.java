@@ -2,16 +2,11 @@ package com.unravel.api.controller;
 
 import com.unravel.api.controller.api.AuthApi;
 import com.unravel.api.entity.BusinessUser;
+import com.unravel.api.model.WebResponse;
 import com.unravel.api.model.auth.BusinessUserResponse;
 import com.unravel.api.model.auth.LoginRequest;
-import com.unravel.api.model.WebResponse;
 import com.unravel.api.service.AuthService;
-import com.unravel.api.util.ApiStaticData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
