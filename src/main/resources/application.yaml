@@ -1,3 +1,4 @@
 spring:
   application:
     name: api-default
+jwt_encoded_key: W3qnUHPEONoweapJ7+gm3b4Nw9gjJHbCCnrJRLp6XCM=

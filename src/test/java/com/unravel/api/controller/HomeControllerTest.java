@@ -1,4 +1,4 @@
-package com.unravel.api;
+package com.unravel.api.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,23 +15,23 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ApiApplicationTests {
+public class HomeControllerTest {
 
-	@Autowired
-	private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-	@Autowired
-	private ObjectMapper objectMapper;
+    @Autowired
+    private ObjectMapper objectMapper;
 
-	@Test
-	void contextLoads() throws Exception {
-		mockMvc.perform(
-				MockMvcRequestBuilders.get("/")
-		).andExpect(status().isOk()).andDo(result -> {
-			WebResponse<String> response = objectMapper.readValue(result.getResponse().getContentAsString(), new TypeReference<>() {
-			});
-			Assertions.assertEquals(response.getData(), "REST API Unravel Malang. [TEST] [API-TEST]");
-		});
-	}
+    @Test
+    void testIndex() throws Exception {
+        mockMvc.perform(
+                MockMvcRequestBuilders.get("/")
+        ).andExpect(status().isOk()).andDo(result -> {
+            WebResponse<String> response = objectMapper.readValue(result.getResponse().getContentAsString(), new TypeReference<>() {
+            });
+            Assertions.assertEquals(response.getData(), "REST API Unravel Malang. [TEST] [API-TEST]");
+        });
+    }
 
 }
